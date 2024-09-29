@@ -1,13 +1,17 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, OnInit, ViewChild } from '@angular/core'
 import { RouterOutlet, RouterLink} from '@angular/router'
 import { Meta, Title } from '@angular/platform-browser'
+import { Navbar } from '../../components/navbar/navbar.component'
+import { Footer } from '../../components/footer/footer.component'
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     RouterOutlet,
-    RouterLink
+    RouterLink,
+    Navbar,
+    Footer
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
