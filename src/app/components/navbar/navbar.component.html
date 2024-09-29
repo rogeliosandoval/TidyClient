@@ -1,0 +1,25 @@
+<header>
+  <nav>
+    <img src="assets/logo.svg" alt="CRM Logo">
+    <div class="nav-links">
+      <div class="nav-link" [class.active]="sharedService.grabRoute() == '/'" routerLink="/">Home</div>
+      <div class="nav-link" [class.active]="sharedService.grabRoute() == '/about'" routerLink="/about">Support</div>
+      <div class="nav-link" [class.active]="sharedService.grabRoute() == '/register'" routerLink="/register">Register</div>
+      <div class="nav-link" [class.active]="sharedService.grabRoute() == '/login'" routerLink="/login">Login</div>
+    </div>
+    @if (!sharedService.mobileNavOpen) {
+      <mat-icon fontIcon="dehaze" (click)="openNav()"></mat-icon>
+    } @else {
+      <mat-icon fontIcon="close" (click)="openNav()"></mat-icon>
+    }
+  </nav>
+</header>
+@if (sharedService.mobileNavOpen) {
+  <div class="mobile-nav-links">
+    <mat-icon fontIcon="close" (click)="openNav()"></mat-icon>
+    <div class="mobile-nav-link">Home</div>
+    <div class="mobile-nav-link">Support</div>
+    <div class="mobile-nav-link">Register</div>
+    <div class="mobile-nav-link">Login</div>
+  </div>
+}

@@ -1,0 +1,98 @@
+@import '../../../variables.scss';
+@import 'include-media';
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  padding: 5px 15px;
+  height: 120px;
+
+  img {
+    width: 200px;
+  }
+
+  mat-icon {
+    display: none;
+
+    @include media('<desktop') {
+      display: block;
+      height: auto;
+      width: auto;
+      font-size: 2.6rem;
+      border-radius: 5px;
+      color: black;
+      padding: 5px;
+    }
+  }
+
+  @include media('<desktop') {
+    justify-content: space-between;
+    height: auto;
+    padding: 20px 15px;
+  }
+}
+
+.mobile-nav-links {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: black;
+  z-index: 3;
+  animation: fadeIn 0.1s linear;
+
+  mat-icon {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    display: block;
+    height: auto;
+    width: auto;
+    font-size: 2.6rem;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    z-index: 3;
+  }
+}
+
+.mobile-nav-link {
+  font-size: 3rem;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+
+  @include media('<desktop') {
+    display: none;
+  }
+}
+
+.nav-link {
+  color: rgb(89, 89, 89);
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+  letter-spacing: 0;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+
+  &:hover {
+    color: black;
+  }
+}
