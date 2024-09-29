@@ -1,0 +1,56 @@
+@import '../../../variables.scss';
+@import 'include-media';
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  padding: 50px;
+
+  @include media('<desktop') {
+    justify-content: center;
+  }
+}
+
+.footer-column {
+  // flex: 1;
+  margin: 0 10px;
+
+  h4 {
+    margin-top: 0;
+  }
+}
+
+.logo-column {
+  max-width: 200px;
+}
+
+.footer-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: gray;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+
+  a {
+    font-weight: bold;
+  }
+}
