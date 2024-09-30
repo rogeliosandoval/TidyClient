@@ -4,6 +4,7 @@ import { About } from './pages/about/about.component'
 import { Contact } from './pages/contact/contact.component'
 import { PrivacyPolicy } from './pages/privacy-policy/privacy-policy.component'
 import { AccessibilityStatement } from './pages/accessibility-statement/accessibility-statement.component'
+import { Dashboard } from './pages/dashboard/dashboard.component'
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -11,5 +12,6 @@ export const routes: Routes = [
   { path: 'contact', component: Contact },
   { path: 'privacy-policy', component: PrivacyPolicy },
   { path: 'accessibility-statement', component: AccessibilityStatement },
+  { path: 'dashboard', component: Dashboard },
   { path: '**', component: Home }
 ]

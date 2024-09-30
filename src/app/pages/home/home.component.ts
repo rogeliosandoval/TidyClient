@@ -1,5 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, OnInit, ViewChild } from '@angular/core'
-import { RouterOutlet, RouterLink} from '@angular/router'
+import { RouterOutlet, RouterLink, Router } from '@angular/router'
 import { Meta, Title } from '@angular/platform-browser'
 import { Navbar } from '../../components/navbar/navbar.component'
 import { Footer } from '../../components/footer/footer.component'
@@ -21,6 +21,7 @@ import { Footer } from '../../components/footer/footer.component'
 export class Home implements OnInit {
   private meta = inject(Meta)
   private titleService = inject(Title)
+  public router = inject(Router)
 
   ngOnInit(): void {
     this.titleService.setTitle('Chubby Designs | Website Design in San Antonio TX')
